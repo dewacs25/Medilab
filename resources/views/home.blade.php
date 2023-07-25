@@ -24,23 +24,21 @@
                                 <div class="icon-box mt-4 mt-xl-0">
                                     <i class="bx bx-receipt"></i>
                                     <h4>Layanan Konsultasi</h4>
-                                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip
-                                    </p>
+                                    <p>.....</p>
                                 </div>
                             </div>
                             <div class="col-xl-4 d-flex align-items-stretch">
                                 <div class="icon-box mt-4 mt-xl-0">
                                     <i class="bx bx-cube-alt"></i>
                                     <h4>Layanan Rujukan</h4>
-                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                    </p>
+                                    <p>.....</p>
                                 </div>
                             </div>
                             <div class="col-xl-4 d-flex align-items-stretch">
                                 <div class="icon-box mt-4 mt-xl-0">
                                     <i class="bx bx-images"></i>
                                     <h4>Layanan Informasi</h4>
-                                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                                    <p>.....</p>
                                 </div>
                             </div>
                         </div>
@@ -63,30 +61,30 @@
 
                 <div
                     class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-                    <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
-                    <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima
-                        temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam
-                        sint et id nulla tenetur. Suscipit aut voluptate.</p>
+                    <h3>Penurunan Angka Kematian Ibu dan Angka Kematian di Kota Bogor melalui tahapan- tahapan yaitu:</h3>
+                    <!--  <p>mempercepat penurunan Angka Kematian Ibu dan Angka Kematian Neonatal di Kota Bogor melalui tahapan- tahapan yaitu:</p>-->
 
                     <div class="icon-box">
                         <div class="icon"><i class="bx bx-fingerprint"></i></div>
-                        <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
-                            sint occaecati cupiditate non provident</p>
+                        <h4 class="title"><a href="">Transparansi dan Akuntabilitas untuk mendukung kebijakan
+                                program.</a></h4>
+                        <!--  <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+                                    sint occaecati cupiditate non provident</p> -->
                     </div>
 
                     <div class="icon-box">
                         <div class="icon"><i class="bx bx-gift"></i></div>
-                        <h4 class="title"><a href="">Nemo Enim</a></h4>
-                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                            praesentium voluptatum deleniti atque</p>
+                        <h4 class="title"><a href="">Penguatan Kualitas Pelayanan Klinis Gawat Darurat Kebidanan dan
+                                Bayi Baru Lahir.</a></h4>
+                        <!--  <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+                                    sint occaecati cupiditate non provident</p> -->
                     </div>
 
                     <div class="icon-box">
                         <div class="icon"><i class="bx bx-atom"></i></div>
-                        <h4 class="title"><a href="">Dine Pad</a></h4>
-                        <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit.
-                            Sunt aut deserunt minus aut eligendi omnis</p>
+                        <h4 class="title"><a href="">Penguatan Sistem Rujukan yang Efisien dan Efektif.</a></h4>
+                        <!--  <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+                                    sint occaecati cupiditate non provident</p> -->
                     </div>
 
                 </div>
@@ -147,10 +145,8 @@
         <div class="container">
 
             <div class="section-title">
-                <h2>Services</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-                    sit in iste officiis commodi quidem hic quas.</p>
+                <h2>Layanan</h2>
+                <p>Layanan Sistem Informasi Rujukan Kota Bogor</p>
             </div>
 
             <div class="row">
@@ -212,59 +208,79 @@
         <div class="container">
 
             <div class="section-title">
-                <h2>Make an Appointment</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-                    sit in iste officiis commodi quidem hic quas.</p>
+                <h2>Layanan Konsultasi</h2>
+                <p>Layanan Konsultasi Kota Bogor</p>
             </div>
 
-            <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+            <form action="/konsultasi" method="POST" class="php-email-form">
+                @csrf
                 <div class="row">
                     <div class="col-md-4 form-group">
-                        <input type="text" name="name" class="form-control" id="name"
-                            placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                        <div class="validate"></div>
+                        <input type="text" name="nama_pelapor"
+                            class="form-control @error('nama_pelapor') is-invalid @enderror" id="name"
+                            placeholder="Nama Pelapor" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                        @error('nama_pelapor')
+                            <span style="color: red; font-size: 12px;">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                        <input type="tel" class="form-control @error('no_telp') is-invalid @enderror" name="no_telp" id="no_telp" placeholder="No Telp"
+                            data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                        @error('no_telp')
+                            <span style="color: red; font-size: 12px;">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="col-md-4 form-group mt-3 mt-md-0">
-                        <input type="email" class="form-control" name="email" id="email"
-                            placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-                        <div class="validate"></div>
+                        <select name="kebutuhan" id="department" class="form-select @error('kebutuhan') is-invalid @enderror">
+                            <option value="">Kebutuhan</option>
+                            <option value="Kebutuhan 1">Kebutuhan 1</option>
+                            <option value="Kebutuhan 2">Kebutuhan 2</option>
+                            <option value="Kebutuhan 3">Kebutuhan 3</option>
+                        </select>
+                        @error('kebutuhan')
+                            <span style="color: red; font-size: 12px;">{{ $message }}</span>
+                        @enderror
                     </div>
-                    <div class="col-md-4 form-group mt-3 mt-md-0">
-                        <input type="tel" class="form-control" name="phone" id="phone"
-                            placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                        <div class="validate"></div>
-                    </div>
+
                 </div>
+                <div class="form-group mt-3">
+                    <textarea class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi" rows="5" placeholder="Deskripsi"></textarea>
+                    @error('deskripsi')
+                            <span style="color: red; font-size: 12px;">{{ $message }}</span>
+                        @enderror
+                </div>
+                <hr>
                 <div class="row">
-                    <div class="col-md-4 form-group mt-3">
-                        <input type="datetime" name="date" class="form-control datepicker" id="date"
-                            placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                        <div class="validate"></div>
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                        <input type="number" class="form-control @error('nik_pasien') is-invalid @enderror" name="nik_pasien" id="nik_pasien"
+                            placeholder="Nik Pasien" data-rule="number" data-msg="Please enter a valid number">
+                        @error('nik_pasien')
+                            <span style="color: red; font-size: 12px;">{{ $message }}</span>
+                        @enderror
                     </div>
-                    <div class="col-md-4 form-group mt-3">
-                        <select name="department" id="department" class="form-select">
-                            <option value="">Select Department</option>
-                            <option value="Department 1">Department 1</option>
-                            <option value="Department 2">Department 2</option>
-                            <option value="Department 3">Department 3</option>
-                        </select>
-                        <div class="validate"></div>
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                        <input type="text" class="form-control @error('nama_pasien') is-invalid @enderror" name="nama_pasien" id="nama_pasien"
+                            placeholder="Nama Pasien" data-rule="text" data-msg="Please enter a valid text">
+                        @error('nama_pasien')
+                            <span style="color: red; font-size: 12px;">{{ $message }}</span>
+                        @enderror
                     </div>
-                    <div class="col-md-4 form-group mt-3">
-                        <select name="doctor" id="doctor" class="form-select">
-                            <option value="">Select Doctor</option>
-                            <option value="Doctor 1">Doctor 1</option>
-                            <option value="Doctor 2">Doctor 2</option>
-                            <option value="Doctor 3">Doctor 3</option>
-                        </select>
-                        <div class="validate"></div>
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                        <input type="date" name="tgl_lahir" class="form-control datepicker @error('tgl_lahir') is-invalid @enderror" id="dateInput"
+                            data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                        @error('tgl_lahir')
+                            <span style="color: red; font-size: 12px;">{{ $message }}</span>
+                        @enderror
                     </div>
+
                 </div>
 
                 <div class="form-group mt-3">
-                    <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-                    <div class="validate"></div>
+                    <textarea class="form-control @error('alamat') is-invalid @enderror" name="alamat" rows="5" placeholder="Alamat Pasien"></textarea>
+                    @error('alamat')
+                            <span style="color: red; font-size: 12px;">{{ $message }}</span>
+                        @enderror
                 </div>
                 <div class="mb-3">
                     <div class="loading">Loading</div>
@@ -282,10 +298,8 @@
         <div class="container">
 
             <div class="section-title">
-                <h2>Departments</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-                    sit in iste officiis commodi quidem hic quas.</p>
+                <h2>Informasi</h2>
+                <p>berisi informasi terkait kegawatdaruratan Medis</p>
             </div>
 
             <div class="row gy-4">
@@ -402,94 +416,6 @@
     </section><!-- End Departments Section -->
 
     <!-- ======= Doctors Section ======= -->
-    <section id="doctors" class="doctors">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Doctors</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-                    sit in iste officiis commodi quidem hic quas.</p>
-            </div>
-
-            <div class="row">
-
-                <div class="col-lg-6">
-                    <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="{{ asset('Medilab') }}/assets/img/doctors/doctors-1.jpg"
-                                class="img-fluid" alt=""></div>
-                        <div class="member-info">
-                            <h4>Walter White</h4>
-                            <span>Chief Medical Officer</span>
-                            <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                            <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="{{ asset('Medilab') }}/assets/img/doctors/doctors-2.jpg"
-                                class="img-fluid" alt=""></div>
-                        <div class="member-info">
-                            <h4>Sarah Jhonson</h4>
-                            <span>Anesthesiologist</span>
-                            <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                            <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 mt-4">
-                    <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="{{ asset('Medilab') }}/assets/img/doctors/doctors-3.jpg"
-                                class="img-fluid" alt=""></div>
-                        <div class="member-info">
-                            <h4>William Anderson</h4>
-                            <span>Cardiology</span>
-                            <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                            <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 mt-4">
-                    <div class="member d-flex align-items-start">
-                        <div class="pic"><img src="{{ asset('Medilab') }}/assets/img/doctors/doctors-4.jpg"
-                                class="img-fluid" alt=""></div>
-                        <div class="member-info">
-                            <h4>Amanda Jepson</h4>
-                            <span>Neurosurgeon</span>
-                            <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                            <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section><!-- End Doctors Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq section-bg">
@@ -578,216 +504,22 @@
         </div>
     </section><!-- End Frequently Asked Questions Section -->
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-
-            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('Medilab') }}/assets/img/testimonials/testimonials-1.jpg"
-                                    class="testimonial-img" alt="">
-                                <h3>Saul Goodman</h3>
-                                <h4>Ceo &amp; Founder</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                    rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                    risus at semper.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('Medilab') }}/assets/img/testimonials/testimonials-2.jpg"
-                                    class="testimonial-img" alt="">
-                                <h3>Sara Wilsson</h3>
-                                <h4>Designer</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                    cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                    legam anim culpa.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('Medilab') }}/assets/img/testimonials/testimonials-3.jpg"
-                                    class="testimonial-img" alt="">
-                                <h3>Jena Karlis</h3>
-                                <h4>Store Owner</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam
-                                    duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('Medilab') }}/assets/img/testimonials/testimonials-4.jpg"
-                                    class="testimonial-img" alt="">
-                                <h3>Matt Brandon</h3>
-                                <h4>Freelancer</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat
-                                    minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore
-                                    labore illum veniam.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('Medilab') }}/assets/img/testimonials/testimonials-5.jpg"
-                                    class="testimonial-img" alt="">
-                                <h3>John Larson</h3>
-                                <h4>Entrepreneur</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                    veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                    culpa fore nisi cillum quid.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-        </div>
-    </section><!-- End Testimonials Section -->
-
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Gallery</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-                    sit in iste officiis commodi quidem hic quas.</p>
-            </div>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row g-0">
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="{{ asset('Medilab') }}/assets/img/gallery/gallery-1.jpg" class="galelry-lightbox">
-                            <img src="{{ asset('Medilab') }}/assets/img/gallery/gallery-1.jpg" alt=""
-                                class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="{{ asset('Medilab') }}/assets/img/gallery/gallery-2.jpg" class="galelry-lightbox">
-                            <img src="{{ asset('Medilab') }}/assets/img/gallery/gallery-2.jpg" alt=""
-                                class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="{{ asset('Medilab') }}/assets/img/gallery/gallery-3.jpg" class="galelry-lightbox">
-                            <img src="{{ asset('Medilab') }}/assets/img/gallery/gallery-3.jpg" alt=""
-                                class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="{{ asset('Medilab') }}/assets/img/gallery/gallery-4.jpg" class="galelry-lightbox">
-                            <img src="{{ asset('Medilab') }}/assets/img/gallery/gallery-4.jpg" alt=""
-                                class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="{{ asset('Medilab') }}/assets/img/gallery/gallery-5.jpg" class="galelry-lightbox">
-                            <img src="{{ asset('Medilab') }}/assets/img/gallery/gallery-5.jpg" alt=""
-                                class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="{{ asset('Medilab') }}/assets/img/gallery/gallery-6.jpg" class="galelry-lightbox">
-                            <img src="{{ asset('Medilab') }}/assets/img/gallery/gallery-6.jpg" alt=""
-                                class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="{{ asset('Medilab') }}/assets/img/gallery/gallery-7.jpg" class="galelry-lightbox">
-                            <img src="{{ asset('Medilab') }}/assets/img/gallery/gallery-7.jpg" alt=""
-                                class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="{{ asset('Medilab') }}/assets/img/gallery/gallery-8.jpg" class="galelry-lightbox">
-                            <img src="{{ asset('Medilab') }}/assets/img/gallery/gallery-8.jpg" alt=""
-                                class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section><!-- End Gallery Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
         <div class="container">
 
             <div class="section-title">
-                <h2>Contact</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-                    sit in iste officiis commodi quidem hic quas.</p>
+                <h2>Kontak</h2>
+                <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
+                            sit in iste officiis commodi quidem hic quas.</p>-->
             </div>
         </div>
 
         <div>
             <iframe style="border:0; width: 100%; height: 350px;"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7027.753149623435!2d106.79715630306214!3d-6.5850512043373906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5e4c7e94375%3A0x500b6c3db97f562e!2sBogor%20City%20Departement%20of%20Health!5e0!3m2!1sen!2sid!4v1690277653271!5m2!1sen!2sid"
                 frameborder="0" allowfullscreen></iframe>
         </div>
 
@@ -798,20 +530,21 @@
                     <div class="info">
                         <div class="address">
                             <i class="bi bi-geo-alt"></i>
-                            <h4>Location:</h4>
-                            <p>A108 Adam Street, New York, NY 535022</p>
+                            <h4>Lokasi :</h4>
+                            <p>Jalan R.M. Tirto Adhi Soerjo, RT.02/RW.02, Tanah Sareal, Kec. Tanah Sereal, Kota Bogor, Jawa
+                                Barat 16161</p>
                         </div>
 
                         <div class="email">
                             <i class="bi bi-envelope"></i>
                             <h4>Email:</h4>
-                            <p>info@example.com</p>
+                            <p>Dinkes@kotabogor.go.id</p>
                         </div>
 
                         <div class="phone">
                             <i class="bi bi-phone"></i>
                             <h4>Call:</h4>
-                            <p>+1 5589 55488 55s</p>
+                            <p>119</p>
                         </div>
 
                     </div>
